@@ -6,3 +6,9 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+@media screen and (max-width: 576px) {
+  .navbar-expand .navbar-nav {
+    flex-direction: column;
+  }
+}

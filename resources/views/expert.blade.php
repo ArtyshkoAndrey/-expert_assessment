@@ -10,24 +10,17 @@
       </div>
     </div>
   </div>
-  <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom border-top px-3">
+  <nav class="navbar navbar-expand navbar-light bg-white border-bottom border-top mx-3">
     <div class="container">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- Left Side Of Navbar -->
-        <ul class="navbar-nav mr-auto"></ul>
-
+      <div class="collapse navbar-collapse d-flex justify-content-center justify-content-sm-start" id="navbarSupportedContent">
         <!-- Right Side Of Navbar -->
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-sm-auto">
           <!-- Authentication Links -->
           <li class="nav-item mx-3">
             <a class="nav-link text-uppercase" href="{{ route('index') }}">Главная</a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link text-uppercase" href="{{ route('expert') }}">Экспертное оценивание</a>
+            <a class="nav-link text-uppercase active" href="{{ route('expert') }}">Экспертное оценивание</a>
           </li>
           <li class="nav-item">
             <a class="nav-link btn btn-danger rounded-0 shadow-sm text-white" href="{{ route('login') }}">Кабинет админисратора</a>
@@ -38,11 +31,11 @@
   </nav>
   <div class="container-fluid m-0 pt-5 bg-white">
     <div class="row d-flex justify-content-center">
-      <div class="col-md-10">
+      <div class="col-md-10 col-xl-8">
         <h3 class="font-weight-bolder text-center">Уважаемые эксперты, предлагаем Вам принять участие в опросе!</h3>
         <hr>
       </div>
-      <div class="col-md-10">
+      <div class="col-md-10 col-xl-8 pl-5">
         <p class="text-muted mb-0">В данном исследовании проводится мониторинг показателей качества жизни населения в городе Новосибирск.
           Мониторинг проводится для оценки уровня благосостояния населения по перечню показателей.
           Все рассматриваемые показатели качества разбиты по направлениям «цифрового города».</p>
