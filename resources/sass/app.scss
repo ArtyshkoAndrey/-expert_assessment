@@ -6,3 +6,23 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+@media screen and (max-width: 576px) {
+  .navbar-expand .navbar-nav {
+    flex-direction: column;
+  }
+}
+
+.table tbody td, .table tbody th{
+  padding: 0 0 0 10px !important;
+  vertical-align: middle;
+
+}
+
+.table tbody td.input {
+  padding: 0 !important;
+}
+
+.table tbody .group-header > td, .table tbody .group-header > th {
+  padding: 0.70rem !important;
+}
