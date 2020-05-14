@@ -1,5 +1,6 @@
 <?php
 
+use App\Group;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +22,10 @@ Route::get('/', function () {
 Route::get('/expert', function () {
   return view('expert');
 })->name('expert');
+
+Route::post('/expert', function () {
+  return view('expert');
+})->name('getMarks');
 
 Route::group(['prefix' => 'admin'], function() {
   Auth::routes(['register' => false]);
