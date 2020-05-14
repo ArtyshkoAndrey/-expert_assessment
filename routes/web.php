@@ -23,12 +23,10 @@ Route::get('/expert', function () {
   return view('expert');
 })->name('expert');
 
-Route::post('/expert', function () {
-  return view('expert');
-})->name('getMarks');
+Route::post('/expert', 'HomeController@expert')->name('getMarks');
 
 Route::group(['prefix' => 'admin'], function() {
   Auth::routes(['register' => false]);
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'AdminController@index')->name('home');

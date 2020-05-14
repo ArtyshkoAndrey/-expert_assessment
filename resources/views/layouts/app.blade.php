@@ -10,8 +10,6 @@
   <title>@yield('title')</title>
   <link rel="shortcut icon" href="{{asset('favicon.ico')}}" type="image/x-icon">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-  <!-- Scripts -->
-  <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
 {{--  <link rel="dns-prefetch" href="//fonts.gstatic.com">--}}
@@ -73,5 +71,8 @@
       @yield('content')
     </main>
   </div>
+  <!-- Scripts -->
+  <script src="{{ asset('js/app.js') }}"></script>
+  @yield('js')
 </body>
 </html>

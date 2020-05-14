@@ -78,7 +78,7 @@
                   <tr>
                     <th scope="row" class="text-center">{{ $count }}</th>
                     <td>{{ $q->name }}</td>
-                    <td class="input"><input id="{{ $q->id }}" name="{{ $q->id }}" size="1" type="number" min="1" max="5" class="rounded-0 border-light form-control"></td>
+                    <td class="input"><input value="1" id="{{ $q->id }}" name="{{ $q->id }}" size="1" type="number" min="1" max="5" required class="rounded-0 border-light form-control"></td>
                   </tr>
                   @php
                     $count++;
@@ -92,4 +92,33 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Уведомление</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          {{ session('status') }}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </div>
+@endsection
+
+@section('js')
+  <script>
+    @if(session('status'))
+    $('#myModal').modal('show')
+    @endif
+  </script>
+
 @endsection
