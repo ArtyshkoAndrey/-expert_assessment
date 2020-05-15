@@ -78,7 +78,7 @@
                   <tr>
                     <th scope="row" class="text-center">{{ $count }}</th>
                     <td>{{ $q->name }}</td>
-                    <td class="input"><input value="1" id="{{ $q->id }}" name="{{ $q->id }}" size="1" type="number" min="1" max="5" required class="rounded-0 border-light form-control"></td>
+                    <td class="input"><input value="3" id="{{ $q->id }}" name="{{ $q->id }}" size="1" type="number" min="1" max="5" required class="rounded-0 border-light form-control"></td>
                   </tr>
                   @php
                     $count++;

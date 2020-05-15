@@ -26,3 +26,8 @@
 .table tbody .group-header > td, .table tbody .group-header > th {
   padding: 0.70rem !important;
 }
+
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active, .sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
+  background-color: #e3342f !important;
+  color: #fff;
+}

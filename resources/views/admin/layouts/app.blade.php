@@ -10,13 +10,24 @@
   <title>Административная панель - @yield('title')</title>
   <link rel="shortcut icon" href="{{asset('favicon.ico')}}" type="image/x-icon">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.0.1/collection/components/icon/icon.min.css">
   <!-- Fonts -->
   {{--  <link rel="dns-prefetch" href="//fonts.gstatic.com">--}}
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="{{ asset('css/adminlte.min.css') }}">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="{{ asset('css/OverlayScrollbars.min.css') }}">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="{{ asset('css/daterangepicker.css') }}">
+  <!-- summernote -->
+  <link rel="stylesheet" href="{{ asset('css/summernote-bs4.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/tempusdominus-bootstrap-4.min.css') }}">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="{{ asset('css/icheck-bootstrap.min.css') }}">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="{{ asset('css/jqvmap.min.css') }}">
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -25,6 +36,9 @@
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
       <!-- Left navbar links -->
       <ul class="navbar-nav">
+        <li class="nav-item d-md-none d-block">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
         <li class="nav-item d-none d-sm-inline-block">
           <a href="{{ route('index') }}" class="nav-link">Главная</a>
         </li>
@@ -79,9 +93,36 @@
         </nav>
       </div>
     </aside>
+    <div class="content-wrapper">
+
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0 text-dark">@yield('nameHeader')</h1>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+
+      <section class="content">
+        @yield('content')
+      </section>
+
+    </div>
   </div>
 </div>
-  <script src="{{ asset('js/app.js') }}"></script>
-  <script src="{{ asset('js/adminlte.min.js') }}"></script>
+<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/adminlte.min.js') }}"></script>
+<!-- JQVMap -->
+<script src="{{ asset('js/jquery.vmap.min.js') }}"></script>
+<script src="{{ asset('js/jquery.vmap.russia.js') }}"></script>
+<script src="{{ asset('js/daterangepicker.js') }}"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="{{ asset('js/tempusdominus-bootstrap-4.min.js') }}"></script>
+<!-- Summernote -->
+<script src="{{ asset('js/summernote-bs4.min.js') }}"></script>
+<!-- overlayScrollbars -->
+<script src="{{ asset('js/jquery.overlayScrollbars.min.js') }}"></script>
 </body>
 </html>

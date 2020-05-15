@@ -10954,3 +10954,9 @@ a.text-dark:focus {
   padding: 0.7rem !important;
 }
 
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active,
+.sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active {
+  background-color: #e3342f !important;
+  color: #fff;
+}
+
