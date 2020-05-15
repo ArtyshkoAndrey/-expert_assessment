@@ -30,3 +30,4 @@ Route::group(['prefix' => 'admin'], function() {
 });
 
 Route::get('/home', 'AdminController@index')->name('home');
+Route::post('/clear', 'AdminController@clear')->name('clearMarks');

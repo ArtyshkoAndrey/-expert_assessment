@@ -6,7 +6,7 @@
   <div class="container-fluid bg-white pb-2 pt-2">
     <div class="row">
       <div class="col-12 text-uppercase">
-        <i class="fas fa-envelope p-2 bg-white rounded-circle shadow-sm ml-md-3" style="font-size: 16px"></i> aleksin.2018@STUD.NTSU.RU
+        <i class="fas fa-envelope p-2 bg-white rounded-circle shadow-sm ml-md-3" style="font-size: 16px"></i> aleksin.2018@stud.nstu.ru
       </div>
     </div>
   </div>
