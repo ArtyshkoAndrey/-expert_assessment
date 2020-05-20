@@ -66,7 +66,7 @@
                     <tr>
                       <th scope="row" class="text-center">{{ $count }}</th>
                       <td>{{ $q->name }}</td>
-                      <td>{{ $q->ratings()->count() > 0 ? round(($q->ratings()->get()->sum('mark') / $q->ratings()->count())/100, 2) : 0}}</td>
+                      <td>{{ $q->ratings()->count() > 0 ? round(($q->ratings()->get()->sum('mark') / $q->ratings()->count()) * 20 / 100, 2) : 0}}</td>
                     </tr>
                     @php
                       $count++;
@@ -102,12 +102,12 @@
                 @foreach($groups as $group)
                   <tr class="text-center">
                     <td>{{ $group->name }}</td>
-                    <td>{{ round($Ak[$group->id], 2) }}</td>
+                    <td>{{ $Ak[$group->id] }}</td>
                   </tr>
                 @endforeach
                   <tr class="font-weight-bolder text-center">
                     <td>Интегральная оценка</td>
-                    <td>{{ round($C0, 2) }}</td>
+                    <td>{{ $C0 }}</td>
                   </tr>
               @else
                 <tr class="font-weight-bolder text-center">

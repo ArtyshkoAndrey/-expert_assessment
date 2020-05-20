@@ -28,26 +28,24 @@ class AdminController extends Controller {
     $Bk = array();
     $Ak = array();
     $C0 = 0;
-    $sumForBk = 0;
     if (Rating::count() > 0) {
       foreach ($groups as $group) {
         $Bjk[$group->id] = array();
         $Ajk[$group->id] = array();
         $qs = $group->questions()->get();
         foreach ($qs as $q) {
-          $Bjk[$group->id][$q->id] = ($q->ratings()->get()->sum('mark') / $q->ratings()->count()) / 100;
+          $Bjk[$group->id][$q->id] = $q->ratings()->get()->sum('mark') / $q->ratings()->count() * 20 / 100;
         }
         foreach ($qs as $q) {
           $Ajk[$group->id][$q->id] = $Bjk[$group->id][$q->id] / array_sum($Bjk[$group->id]);
         }
-        $sumForBk += array_sum($Bjk[$group->id]);
         $Ck[$group->id] = array_sum($Bjk[$group->id]) / count($qs);
         $Bk[$group->id] = $Ck[$group->id];
       }
       foreach ($groups as $group) {
-        $Ak[$group->id] = ($Bk[$group->id] / $sumForBk) * 100;
+        $Ak[$group->id] = ($Bk[$group->id] / array_sum($Bk)) * 100;
       }
-      $C0 = ($sumForBk / count($groups)) * 100;
+      $C0 = (array_sum($Bk) / count($groups)) * 100;
     }
 
     return view('admin.home', compact('Ak', 'C0', 'groups'));
